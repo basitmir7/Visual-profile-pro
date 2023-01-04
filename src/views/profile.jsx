@@ -4,7 +4,7 @@ import Posts from "../components/posts";
 import Todo from "../components/todo";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
-const Profile = () => {
+const Profile = ({ data, singleUser }) => {
   const links = [
     { name: "Profile", link: "/profile/details" },
     { name: "Posts", link: "/profile/posts" },
@@ -12,7 +12,7 @@ const Profile = () => {
     { name: "ToDo", link: "/profile/todo" },
   ];
   return (
-    <main className="container flex p-10 text-xl">
+    <main className="flex p-10 text-xl">
       <section className="Navbar w-3/12 bg-gradient-to-t from-purple-600 to-blue-600 rounded-2xl">
         <ul className="flex flex-col" style={{ padding: "16rem 3rem" }}>
           {links.map((link, index) => {
@@ -31,7 +31,7 @@ const Profile = () => {
 
       <section className="grow">
         <Routes>
-          <Route path="details" element={<Details />} />
+          <Route path="details" element={<Details data={data} />} />
           <Route path="posts" element={<Posts />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="todo" element={<Todo />} />

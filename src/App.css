@@ -29,3 +29,20 @@
 .border-bt-li {
   border-bottom: 1px solid #c4c4c4dc;
 }
+.grid-main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.gchild1 {
+  grid-area: 1 / 1 / 2 / 6;
+}
+.gchild2 {
+  grid-area: 2 / 1 / 6 / 3;
+}
+.gchild3 {
+  grid-area: 2 / 3 / 6 / 6;
+}

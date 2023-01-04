@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import Profile from "./profile";
+
 const Users = ({ data }) => {
+  const [singleUser, setSingleUser] = useState({});
   return (
     <section className="flex justify-center  items-center min-h-screen">
       <div className="bg-curve custom-shape-divider-bottom-1672816296">
@@ -24,20 +28,32 @@ const Users = ({ data }) => {
           className="overflow-y-scroll scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 p-5 "
           style={{ height: "25rem" }}
         >
-          {data.map((user) => {
-            return (
-              <Link to="/profile" key={user.id}>
-                <li className="flex text-xl p-2 cursor-pointer items-center border-bt">
-                  <img
-                    className="h-12 w-12 rounded-full bg-slate-200 mr-4"
-                    src={user.image}
-                  />
-                  {user.firstName}
-                  {""} {user.lastName}
-                </li>
-              </Link>
-            );
-          })}
+          {!data ? (
+            <div>loading..</div>
+          ) : (
+            data.map((user) => {
+              return (
+                <Link
+                  to="/profile"
+                  key={user.id}
+                  index={user.id}
+                  onClick={() => {
+                    setSingleUser(user);
+                    console.log(user);
+                  }}
+                >
+                  <li className="flex text-xl p-2 cursor-pointer items-center border-bt">
+                    <img
+                      className="h-12 w-12 rounded-full bg-slate-200 mr-4"
+                      src={user.image}
+                    />
+                    {user.firstName}
+                    {""} {user.lastName}
+                  </li>
+                </Link>
+              );
+            })
+          )}
         </ul>
       </div>
     </section>

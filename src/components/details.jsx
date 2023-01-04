@@ -1,7 +1,11 @@
-const Details = () => {
+const Details = ({ data }) => {
   return (
     <>
-      <h1>details page</h1>
+      <main className="grid-main">
+        <header className="gchild1"></header>
+        <section className="gchild2"></section>
+        <section className="gchild3">more details</section>
+      </main>
     </>
   );
 };

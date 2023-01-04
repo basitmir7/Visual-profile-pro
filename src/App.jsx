@@ -2,14 +2,17 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Users from "./views/Users";
 import Profile from "./views/profile";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState([]);
+
   function fetchData() {
     fetch("https://dummyjson.com/users")
       .then((res) => res.json())
-      .then((res) => setData(res.users));
+      .then((res) => setData(res.users))
+      .catch((error) => console.log(error));
   }
   useEffect(() => {
     fetchData();
