@@ -31,10 +31,10 @@ const Profile = () => {
 
       <section className="grow">
         <Routes>
-          <Route path="/profile/details" element={<Details />} />
-          <Route path="/profile/posts" element={<Posts />} />
-          <Route path="/profile/gallery" element={<Gallery />} />
-          <Route path="/profile/todo" element={<Todo />} />
+          <Route path="details" element={<Details />} />
+          <Route path="posts" element={<Posts />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="todo" element={<Todo />} />
         </Routes>
       </section>
     </main>
