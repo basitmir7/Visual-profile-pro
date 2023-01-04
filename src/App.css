@@ -1,0 +1,27 @@
+:root {
+  scroll-behavior: smooth;
+}
+.custom-shape-divider-bottom-1672816407 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.custom-shape-divider-bottom-1672816407 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 181px;
+}
+
+.bg-curve {
+  position: absolute;
+  width: 100%;
+
+  padding-top: 20%;
+
+  background: linear-gradient(12deg, #a22ffd, #2d2dd4eb);
+  top: 0;
+}
