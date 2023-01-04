@@ -20,7 +20,7 @@ function App() {
       <div className="App box-border ">
         <Routes>
           <Route path="/" element={<Users data={data} />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/*" element={<Profile />} />
         </Routes>
       </div>
     </Router>

@@ -16,7 +16,7 @@ const Users = ({ data }) => {
           ></path>
         </svg>
       </div>
-      <div className="rounded-xl shadow-xl w-1/3 overflow-hidden text-gray-700 z-10 bg-white">
+      <div className="rounded-2xl shadow-xl w-1/3 overflow-hidden text-gray-700 z-10 bg-white">
         <h3 className="text-center p-10 text-xl text-gray-800 bg-gray-100">
           select an account
         </h3>
@@ -27,16 +27,13 @@ const Users = ({ data }) => {
           {data.map((user) => {
             return (
               <Link to="/profile" key={user.id}>
-                <li
-                  className="flex text-xl p-3 cursor-pointer items-center"
-                  style={{ borderBottom: "1px solid #e1dfdf" }}
-                >
+                <li className="flex text-xl p-2 cursor-pointer items-center border-bt">
                   <img
                     className="h-12 w-12 rounded-full bg-slate-200 mr-4"
                     src={user.image}
                   />
                   {user.firstName}
-                  {user.lastName}
+                  {""} {user.lastName}
                 </li>
               </Link>
             );
