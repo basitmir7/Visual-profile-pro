@@ -4,13 +4,14 @@ import Posts from "../components/posts";
 import Todo from "../components/todo";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
-const Profile = ({ data, singleUser }) => {
+const Profile = () => {
   const links = [
     { name: "Profile", link: "/profile/details" },
     { name: "Posts", link: "/profile/posts" },
     { name: "Gallery", link: "/profile/gallery" },
     { name: "ToDo", link: "/profile/todo" },
   ];
+
   return (
     <main className="flex p-10 text-xl">
       <section className="Navbar w-3/12 bg-gradient-to-t from-purple-600 to-blue-600 rounded-2xl">
@@ -31,7 +32,7 @@ const Profile = ({ data, singleUser }) => {
 
       <section className="grow">
         <Routes>
-          <Route path="details" element={<Details data={data} />} />
+          <Route path="details" element={<Details />} />
           <Route path="posts" element={<Posts />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="todo" element={<Todo />} />

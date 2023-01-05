@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Profile from "./profile";
+import { UserContext } from "../usercontext";
+import React, { useContext } from "react";
 
-const Users = ({ data }) => {
-  const [singleUser, setSingleUser] = useState({});
+const Users = () => {
+  // const [singleUser, setSingleUser] = useState({});
+  const { changeUser } = useContext(UserContext);
+  const { data } = useContext(UserContext);
   return (
     <section className="flex justify-center  items-center min-h-screen">
       <div className="bg-curve custom-shape-divider-bottom-1672816296">
@@ -31,24 +34,24 @@ const Users = ({ data }) => {
           {!data ? (
             <div>loading..</div>
           ) : (
-            data.map((user) => {
+            data.map((person) => {
               return (
                 <Link
                   to="/profile"
-                  key={user.id}
-                  index={user.id}
+                  key={person.id}
+                  index={person.id}
                   onClick={() => {
-                    setSingleUser(user);
-                    console.log(user);
+                    changeUser(person);
+                    console.log(person);
                   }}
                 >
                   <li className="flex text-xl p-2 cursor-pointer items-center border-bt">
                     <img
                       className="h-12 w-12 rounded-full bg-slate-200 mr-4"
-                      src={user.image}
+                      src={person.image}
                     />
-                    {user.firstName}
-                    {""} {user.lastName}
+                    {person.firstName}
+                    {""} {person.lastName}
                   </li>
                 </Link>
               );
