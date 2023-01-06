@@ -10,7 +10,7 @@ function App() {
   return (
     <UserContextProvider>
       <Router>
-        <div className="App box-border ">
+        <div className="App box-border antialiased ">
           <Routes>
             <Route path="/" element={<Users />} />
             <Route path="/profile/*" element={<Profile />} />

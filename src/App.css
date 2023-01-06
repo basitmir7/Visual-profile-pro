@@ -61,3 +61,6 @@
 .transition-smooth {
   transition: all ease-in-out 200ms;
 }
+.height-full {
+  height: 100vh;
+}
