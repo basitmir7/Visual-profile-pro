@@ -23,6 +23,7 @@
   background: linear-gradient(12deg, #a22ffd, #2d2dd4eb);
   top: 0;
 }
+
 .border-bt {
   border-bottom: 1px solid #e1dfdf;
 }
@@ -63,4 +64,45 @@
 }
 .height-full {
   height: 100vh;
+}
+.ul-padding {
+  padding: 16rem 3rem;
+}
+
+@media screen and (max-width: 700px) {
+  .bg-curve {
+    padding-top: 70%;
+  }
+  .grid-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gchild1 {
+    grid-area: 1 / 1 / 2 / 6;
+  }
+  .gchild2 {
+    grid-area: 2 / 1 / 4 / 6;
+  }
+  .gchild3 {
+    grid-area: 4 / 1 / 6 / 6;
+  }
+  .ul-padding {
+    padding: 0.5rem 1rem;
+  }
+  .border-bt {
+    border-bottom: 1px solid #e1dfdf;
+  }
+  .border-rt {
+    border-right: none;
+  }
+  .border-bt-li {
+    border-bottom: none;
+  }
+  .leaflet-container {
+    width: 100%;
+  }
+  .height-full {
+    height: 50vh;
+  }
 }

@@ -6,7 +6,7 @@ const Details = ({}) => {
   return (
     <>
       {user && (
-        <main className="grid-main pl-8">
+        <main className="grid-main pl-8 max-sm:pl-0 max-sm:text-sm">
           <header className="gchild1 flex justify-between border-bt p-5 ">
             <div>Profile</div>
             <div className="flex items-center">
@@ -63,7 +63,7 @@ const Details = ({}) => {
               </p>
             </div>
           </section>
-          <section className="gchild3 pl-10">
+          <section className="gchild3 pl-10 max-sm:pl-0">
             <div className="info address-details w-3/5 items-baseline">
               <header>Address</header>
               <p>

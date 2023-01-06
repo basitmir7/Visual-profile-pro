@@ -13,7 +13,7 @@ const Chats = () => {
   };
   return (
     <>
-      <div className="absolute right-20 -bottom-20 rounded-2xl shadow-xl w-1/5 overflow-hidden text-gray-700 z-10 text-md">
+      <div className="absolute right-20 -bottom-20 rounded-2xl shadow-xl w-1/5 overflow-hidden text-gray-700 z-10 text-md max-sm:-bottom-3/4 max-sm:w-3/6 max-sm:text-sm max-sm:right-10">
         <h3 className="flex justify-around items-center p-2  text-gray-800 bg-blue-500 text-gray-100">
           <FiMessageSquare />
           Chats
@@ -33,10 +33,10 @@ const Chats = () => {
             return (
               <li
                 key={person.id}
-                className="flex p-2 cursor-pointer items-center border-bt"
+                className="flex p-2 cursor-pointer items-center border-bt max-sm:text-sm"
               >
                 <img
-                  className="h-8 w-8 rounded-full bg-slate-200 mr-4"
+                  className="h-8 w-8 rounded-full bg-slate-200 mr-4 max-sm:h-10 max-sm:w-10"
                   src={person.image}
                 />{" "}
                 {person.firstName}

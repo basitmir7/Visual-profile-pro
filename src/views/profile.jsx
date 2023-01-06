@@ -14,15 +14,15 @@ const Profile = () => {
   ];
 
   return (
-    <main className="flex p-10 text-xl">
-      <section className="Navbar w-3/12 bg-gradient-to-t from-purple-600 to-blue-600 rounded-2xl">
-        <ul className="flex flex-col" style={{ padding: "16rem 3rem" }}>
+    <main className="flex p-10 text-xl max-sm:flex-col max-sm:text-md">
+      <section className="Navbar w-3/12 bg-gradient-to-t from-purple-600 to-blue-600 rounded-2xl max-sm:w-full">
+        <ul className="ul-padding flex flex-col ">
           {links.map((link, index) => {
             return (
               <Link
                 key={index}
                 to={link.link}
-                className="text-gray-400 pb-5 pt-5 border-bt-li active:text-gray-100 focus:text-gray-100"
+                className="text-gray-400 pb-5 pt-5 border-bt-li active:text-gray-100 focus:text-gray-100 max-sm:pt-1 max-sm:pb-1"
               >
                 {link.name}
               </Link>
