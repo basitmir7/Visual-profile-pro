@@ -55,4 +55,9 @@
   width: 90%;
   border-radius: 20px;
   margin-top: 3rem;
+
+  z-index: 1;
+}
+.transition-smooth {
+  transition: all ease-in-out 200ms;
 }

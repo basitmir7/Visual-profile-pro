@@ -15,6 +15,7 @@ const Details = ({}) => {
                 src={user.image}
               />
               {user.firstName}
+              {""}
               {user.lastName}
             </div>
           </header>

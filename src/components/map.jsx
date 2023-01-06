@@ -19,6 +19,10 @@ function MyMap() {
           </Popup>
         </Marker>
       </MapContainer>
+      <p className="text-sm p-2 text-gray-300 font-light text-center">
+        <b className="text-gray-600">lat :</b> {user.address.coordinates.lat}{" "}
+        <b className="text-gray-600">long :</b> {user.address.coordinates.lng}
+      </p>
     </>
   );
 }

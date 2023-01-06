@@ -2,6 +2,7 @@ import Details from "../components/details";
 import Gallery from "../components/gallery";
 import Posts from "../components/posts";
 import Todo from "../components/todo";
+import Chats from "../components/chat";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 const Profile = () => {
@@ -21,7 +22,7 @@ const Profile = () => {
               <Link
                 key={index}
                 to={link.link}
-                className="text-gray-400 pb-5 pt-5 border-bt-li"
+                className="text-gray-400 pb-5 pt-5 border-bt-li active:text-gray-100 focus:text-gray-100"
               >
                 {link.name}
               </Link>
@@ -30,7 +31,7 @@ const Profile = () => {
         </ul>
       </section>
 
-      <section className="grow">
+      <section className="grow box-border">
         <Routes>
           <Route path="details" element={<Details />} />
           <Route path="posts" element={<Posts />} />
@@ -38,6 +39,7 @@ const Profile = () => {
           <Route path="todo" element={<Todo />} />
         </Routes>
       </section>
+      <Chats />
     </main>
   );
 };
