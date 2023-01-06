@@ -1,9 +1,8 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
+@layer utilities {
   .scrollbar::-webkit-scrollbar {
     width: 11.5px;
     height: 20px;
@@ -23,9 +22,29 @@
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #c0a0b9;
   }
-
 }
-body{
+
+@layer components {
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  .info > * {
+    padding: 6px;
+  }
+  .info > img {
+    height: 200px;
+    width: 200px;
+  }
+  .info > p > b {
+    color: rgba(190, 190, 190, 0.91);
+    font-weight: 400;
+  }
+}
+
+body {
   padding: 0;
   margin: 0;
 }

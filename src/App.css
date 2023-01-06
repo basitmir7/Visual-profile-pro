@@ -26,6 +26,9 @@
 .border-bt {
   border-bottom: 1px solid #e1dfdf;
 }
+.border-rt {
+  border-right: 1px solid #e1dfdf;
+}
 .border-bt-li {
   border-bottom: 1px solid #c4c4c4dc;
 }
@@ -39,10 +42,17 @@
 
 .gchild1 {
   grid-area: 1 / 1 / 2 / 6;
+  height: 4.5rem;
 }
 .gchild2 {
   grid-area: 2 / 1 / 6 / 3;
 }
 .gchild3 {
   grid-area: 2 / 3 / 6 / 6;
+}
+.leaflet-container {
+  height: 18rem;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 3rem;
 }
