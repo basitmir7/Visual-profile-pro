@@ -5,6 +5,7 @@ import { MdPadding } from "react-icons/md";
 
 const Modal = ({ user, modal }) => {
   const { data } = useContext(UserContext);
+  const { changeUser } = useContext(UserContext);
   return (
     <>
       <div
@@ -33,6 +34,10 @@ const Modal = ({ user, modal }) => {
               <li
                 className="flex p-2 cursor-pointer items-center border-bt max-sm:text-sm"
                 key={i.id}
+                index={i.id}
+                onClick={() => {
+                  changeUser(i);
+                }}
               >
                 <img
                   className="h-8 w-8 rounded-full bg-slate-200 mr-4 max-sm:h-10 max-sm:w-10"
