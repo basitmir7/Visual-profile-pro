@@ -1,15 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UserContext } from "../usercontext";
 import MyMap from "./map";
+import Modal from "./modal";
 const Details = ({}) => {
+  const [openModal, setopenModal] = useState(false);
   const { user } = useContext(UserContext);
+
+  const openProfileModal = () => {
+    setopenModal(!openModal);
+  };
   return (
     <>
       {user && (
         <main className="grid-main pl-8 max-sm:pl-0 max-sm:text-sm">
           <header className="gchild1 flex justify-between border-bt p-5 ">
             <div>Profile</div>
-            <div className="flex items-center">
+            <div className="flex items-center" onClick={openProfileModal}>
               <img
                 className="h-12 w-12 rounded-full bg-slate-200 mr-4"
                 src={user.image}
@@ -19,6 +25,8 @@ const Details = ({}) => {
               {user.lastName}
             </div>
           </header>
+          <Modal user={user} modal={openModal} />
+
           <section className="gchild2 border-rt">
             <div className="info user-info border-bt pb-4">
               <img
